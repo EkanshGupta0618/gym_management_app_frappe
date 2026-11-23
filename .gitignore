@@ -1,0 +1,33 @@
+# Bench-managed dependencies and local runtime state
+/apps/*
+!/apps/gym_management/
+/env/
+/sites/
+/config/
+/logs/
+/archived/
+/Procfile
+/patches.txt
+
+# Python and frontend artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+node_modules/
+build/
+dist/
+
+# Local configuration and editor files
+/.agents/
+/.codex/
+/.aws/
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+.DS_Store

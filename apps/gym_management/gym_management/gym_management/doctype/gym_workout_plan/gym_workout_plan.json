@@ -1,0 +1,97 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"creation": "2026-11-21 16:15:31.369444",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"plan_name",
+		"level",
+		"published",
+		"route",
+		"description",
+		"exercises"
+	],
+	"fields": [
+		{
+			"fieldname": "plan_name",
+			"fieldtype": "Data",
+			"label": "Plan Name",
+			"reqd": 1,
+			"unique": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "level",
+			"fieldtype": "Select",
+			"label": "Level",
+			"options": "Beginner\nIntermediate\nAdvanced",
+			"reqd": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "published",
+			"fieldtype": "Check",
+			"label": "Published"
+		},
+		{
+			"fieldname": "route",
+			"fieldtype": "Data",
+			"label": "Route"
+		},
+		{
+			"fieldname": "description",
+			"fieldtype": "Text Editor",
+			"label": "Description"
+		},
+		{
+			"fieldname": "exercises",
+			"fieldtype": "Table",
+			"label": "Exercises",
+			"options": "Gym Workout Plan Exercise"
+		}
+	],
+	"grid_page_length": 50,
+	"index_web_pages_for_search": 1,
+	"is_submittable": 0,
+	"links": [],
+	"modified": "2026-11-21 16:32:02.503921",
+	"modified_by": "Administrator",
+	"module": "Gym Management",
+	"name": "Gym Workout Plan",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"role": "Gym Admin",
+			"read": 1,
+			"create": 1,
+			"write": 1,
+			"delete": 1,
+			"report": 1,
+			"export": 1,
+			"print": 1,
+			"email": 1,
+			"share": 1
+		},
+		{
+			"role": "Gym Trainer",
+			"read": 1,
+			"create": 1,
+			"write": 1
+		},
+		{
+			"role": "Gym Member",
+			"read": 1
+		}
+	],
+	"row_format": "Dynamic",
+	"rows_threshold_for_grid_search": 20,
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"autoname": "field:plan_name",
+	"has_web_view": 1,
+	"allow_guest_to_view": 1,
+	"route": "workout-plans",
+	"is_published_field": "published"
+}

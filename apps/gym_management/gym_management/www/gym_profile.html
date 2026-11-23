@@ -1,0 +1,22 @@
+{% extends "templates/web.html" %}
+{% block page_content %}
+<h1>My Profile</h1>
+{% if not member %}
+  <p>No gym member record is linked to your account.</p>
+{% else %}
+  <h3>{{ member.member_name }}</h3>
+  <h4>Active Plan</h4>
+  {% if active %}
+    <p>{{ active.membership_type }} ({{ active.start_date }} to {{ active.end_date }})</p>
+    <p><b>{{ days_left }}</b> days remaining</p>
+  {% else %}<p>No active plan.</p>{% endif %}
+
+  <h4>Allocated Trainer</h4>
+  {% if trainer %}
+    <p>{{ trainer.trainer_name }} | {{ trainer.email }} | {{ trainer.phone or "-" }}</p>
+  {% else %}<p>No trainer allocated.</p>{% endif %}
+
+  <h4>Past Plans</h4>
+  <ul>{% for m in past %}<li>{{ m.membership_type }}: {{ m.start_date }} to {{ m.end_date }} ({{ m.status }})</li>{% else %}<li>None</li>{% endfor %}</ul>
+{% endif %}
+{% endblock %}

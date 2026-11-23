@@ -1,0 +1,99 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"creation": "2026-11-21 16:14:45.840646",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"member",
+		"locker",
+		"booking_date",
+		"start_time",
+		"end_time",
+		"amended_from"
+	],
+	"fields": [
+		{
+			"fieldname": "member",
+			"fieldtype": "Link",
+			"label": "Member",
+			"options": "Gym Member",
+			"reqd": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "locker",
+			"fieldtype": "Link",
+			"label": "Locker",
+			"options": "Gym Locker",
+			"reqd": 1,
+			"in_list_view": 1
+		},
+		{
+			"fieldname": "booking_date",
+			"fieldtype": "Date",
+			"label": "Booking Date",
+			"reqd": 1,
+			"default": "Today"
+		},
+		{
+			"fieldname": "start_time",
+			"fieldtype": "Time",
+			"label": "Start Time"
+		},
+		{
+			"fieldname": "end_time",
+			"fieldtype": "Time",
+			"label": "End Time"
+		},
+		{
+			"fieldname": "amended_from",
+			"fieldtype": "Link",
+			"label": "Amended From",
+			"no_copy": 1,
+			"options": "Gym Locker Booking",
+			"print_hide": 1,
+			"read_only": 1,
+			"search_index": 1
+		}
+	],
+	"grid_page_length": 50,
+	"index_web_pages_for_search": 1,
+	"is_submittable": 1,
+	"links": [],
+	"modified": "2026-11-21 16:32:02.503921",
+	"modified_by": "Administrator",
+	"module": "Gym Management",
+	"name": "Gym Locker Booking",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"role": "Gym Admin",
+			"read": 1,
+			"create": 1,
+			"write": 1,
+			"delete": 1,
+			"report": 1,
+			"export": 1,
+			"print": 1,
+			"email": 1,
+			"share": 1,
+			"submit": 1,
+			"cancel": 1,
+			"amend": 1
+		},
+		{
+			"role": "Gym Member",
+			"read": 1,
+			"create": 1,
+			"write": 1,
+			"submit": 1
+		}
+	],
+	"row_format": "Dynamic",
+	"rows_threshold_for_grid_search": 20,
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"autoname": "format:GYM-LB-{####}"
+}
